@@ -24,7 +24,6 @@ library(gridExtra)
 ```{r echo=FALSE, Load_the_Data}
 # 加载数据
 loandata <- read.csv('prosperLoanData.csv')
-head(loandata)
 str(loandata)
 ```
 
