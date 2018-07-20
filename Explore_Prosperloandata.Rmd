@@ -49,11 +49,19 @@ ggplot(aes(DebtToIncomeRatio),data = loandata) +
 从债务收入比的直方图中可以看出，图形呈右偏态，大部分贷款人的债务收入比在0.5之下，是有能力偿还债务的。
 
 ```{r echo=FALSE}
+qplot(LoanOriginalAmount,data = loandata,binwidth = 1000) +
+  scale_x_continuous(breaks = seq(0,35000,5000))
+min(loandata$LoanOriginalAmount)
+max(loandata$LoanOriginalAmount)
+```
+从图中可以看出，贷款额度为1000-35000美元，几个峰值分别处于5000、10000和15000位置。
+
+```{r echo=FALSE}
 loandata$Term <- factor(loandata$Term)
 ggplot(aes(Term),data = loandata) + 
   geom_bar()
 ```
-从图中可以看出，借款期限在36个月的情况最多。
+从图中可以看出，借款期限分布为1～5年，其中借款期限为3年的占比最大。
 
 ```{r echo=FALSE}
 loandata$ListingCategory..numeric. <- factor(loandata$ListingCategory..numeric.)
@@ -130,6 +138,8 @@ qplot(BorrowerRate,data = loandata,color = I('black'),
    scale_x_continuous(breaks = seq(0,0.4,0.05))
 ```
 从图中可以看出，大部分贷款利率在0.1～0.2范围内。
+
+
 
 # 单变量分析
 
