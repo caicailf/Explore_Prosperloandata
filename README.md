@@ -18,3 +18,12 @@
 * 贷款利率会受到哪些因素的影响？
 * 最常见的贷款用途是哪些？
 * 获得的贷款金额和年收入是否相关？
+
+# 安装包
+
+<pre><code>install packages("ggplot2")
+</code></pre>
+<pre><code>install packages("dplyr")
+</code></pre>
+<pre><code>install.packages("gridExtra")
+</code></pre>
